@@ -71,11 +71,11 @@ const Register = () => {
           <input required style={{ display: "none" }} type="file" id="file" />
           <label htmlFor="file">
             <img src={Add} alt="" />
-            <span>Add an avatar</span>
+            <span>Select an image</span>
           </label>
           <button disabled={loading}>Sign up</button>
-          {loading && "Uploading and compressing the image please wait..."}
-          {err && <span>Something went wrong</span>}
+          {loading && "Uploading image, please wait..."}
+          {err && <span>Complete form and submit required documents</span>}
         </form>
         <p>
           You do have an account? <Link to="/login">Login</Link>
