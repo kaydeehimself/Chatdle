@@ -62,7 +62,7 @@ const Register = () => {
   return (
     <div className="formContainer">
       <div className="formWrapper">
-        <span className="logo">Tide Chat</span>
+        <span className="logo">TideChat</span>
         <span className="title">Register</span>
         <form onSubmit={handleSubmit}>
           <input required type="text" placeholder="display name" />
@@ -75,10 +75,21 @@ const Register = () => {
           </label>
           <button disabled={loading}>Sign up</button>
           {loading && "Uploading image, please wait..."}
-          {err && <span>Complete form and submit required documents</span>}
+          {err && <span className="errMsg">Complete form and submit required documents</span>}
         </form>
         <p>
-          You do have an account? <Link to="/login">Login</Link>
+          You do have an account? 
+          <Link to="/login" 
+            style={{
+                'color': 'black', 
+                'textDecoration': 'none',
+                'backgroundColor': '#61f100',
+                'borderRadius': '3px',
+                'padding': '5px',
+                'fontWeight':'bold'
+                }}>
+            Login
+          </Link>
         </p>
       </div>
     </div>

@@ -22,15 +22,27 @@ const Login = () => {
   return (
     <div className="formContainer">
       <div className="formWrapper">
-        <span className="logo">Tide Chat</span>
+        <span className="logo">TideChat</span>
         <span className="title">Login</span>
         <form onSubmit={handleSubmit}>
           <input type="email" placeholder="email" />
           <input type="password" placeholder="password" />
           <button>Sign in</button>
-          {err && <span>Something went wrong</span>}
+          {err && <span className="errMsg">Something went wrong</span>}
         </form>
-        <p>You don't have an account? <Link to="/register">Register</Link></p>
+        <p>You don't have an account? 
+        <Link to="/register" 
+            style={{
+                'color': 'black', 
+                'textDecoration': 'none',
+                'backgroundColor': '#61f100',
+                'borderRadius': '3px',
+                'padding': '5px',
+                'fontWeight':'bold'
+                }}>
+            Register
+          </Link>
+        </p>
       </div>
     </div>
   );
